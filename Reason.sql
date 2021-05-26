@@ -19,12 +19,7 @@ SELECT [Id],
 				when 1 then 'Kadýn'
 				when 2 then 'Erkek'
 		  end as Cinsiyet,
-      --,[HastaninYasi]
-      --,[Phone]
       [BasvuruYeri],
-      --,[Description]
-      --,[CalledById]
-      --,[CityId]
       case a.[Status]
 				when 1 then 'Baþarýlý Anket'
 				when 2 then 'Askýda'
@@ -33,6 +28,5 @@ SELECT [Id],
 				when 0 then 'Yeni Veri'
 				else 'HATA' end as Status,
       [IsDeleted]
-      --,[LookUpList_KurumId]
   FROM [SYMvePersonelSabimAnket].[dbo].[SYMPatients] a
   where a.[IsDeleted] like 0 and [CallTime] is NOT NULL 
